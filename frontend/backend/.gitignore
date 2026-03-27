@@ -1,0 +1,45 @@
+# ============================================
+# VisionVoice AI - Git Ignore
+# ============================================
+
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Environment variables (keep .env.example for reference)
+.env
+.env.local
+.env.production
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Build outputs
+frontend/build/
+frontend/dist/
+
+# SSL certificates (keep these private!)
+*.key
+*.pem
+*.crt
+*.cer
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Database (for future use)
+*.db
+*.sqlite
+
+# Secrets
+credentials.json
+secrets/

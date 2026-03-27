@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="mainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="50%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background Circle with Gradient -->
+  <circle cx="256" cy="256" r="220" fill="url(#mainGrad)" opacity="0.1"/>
+  <circle cx="256" cy="256" r="180" fill="none" stroke="url(#mainGrad)" stroke-width="3" opacity="0.3"/>
+  
+  <!-- Main Eye Shape -->
+  <g filter="url(#glow)">
+    <!-- Outer Eye Ring -->
+    <ellipse cx="256" cy="240" rx="120" ry="80" fill="none" stroke="url(#mainGrad)" stroke-width="12" stroke-linecap="round"/>
+    
+    <!-- Inner Eye -->
+    <circle cx="256" cy="240" r="50" fill="url(#mainGrad)"/>
+    
+    <!-- Pupil -->
+    <circle cx="256" cy="240" r="22" fill="#1e3a8a"/>
+    
+    <!-- Highlight -->
+    <circle cx="244" cy="228" r="8" fill="white" opacity="0.8"/>
+  </g>
+  
+  <!-- Vision Rays -->
+  <g stroke="url(#glowGrad)" stroke-width="4" stroke-linecap="round" opacity="0.9">
+    <line x1="256" y1="140" x2="256" y2="100"/>
+    <line x1="176" y1="160" x2="146" y2="130"/>
+    <line x1="336" y1="160" x2="366" y2="130"/>
+  </g>
+  
+  <!-- Sound Waves (Voice) - Right Side -->
+  <g fill="none" stroke="#22d3ee" stroke-width="5" stroke-linecap="round" opacity="0.8">
+    <path d="M360 200 Q400 240 360 280"/>
+    <path d="M380 180 Q440 240 380 300"/>
+    <path d="M400 160 Q480 240 400 320"/>
+  </g>
+  
+  <!-- Sound Wave Dots -->
+  <g fill="#22d3ee">
+    <circle cx="350" cy="220" r="5"/>
+    <circle cx="360" cy="240" r="6"/>
+    <circle cx="350" cy="260" r="5"/>
+  </g>
+  
+  <!-- Accessibility Symbol - Bottom -->
+  <g transform="translate(256, 380)">
+    <circle cx="0" cy="0" r="30" fill="none" stroke="#06b6d4" stroke-width="4"/>
+    <path d="M-8 5 L0 -5 L8 5" fill="none" stroke="#06b6d4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="0" cy="18" r="4" fill="#06b6d4"/>
+  </g>
+  
+  <!-- Subtle Grid Pattern -->
+  <g stroke="#06b6d4" stroke-width="1" opacity="0.1">
+    <line x1="100" y1="100" x2="150" y2="150"/>
+    <line x1="412" y1="100" x2="362" y2="150"/>
+    <line x1="100" y1="412" x2="150" y2="362"/>
+    <line x1="412" y1="412" x2="362" y2="362"/>
+  </g>
+</svg>
